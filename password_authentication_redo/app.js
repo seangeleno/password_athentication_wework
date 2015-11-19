@@ -13,7 +13,7 @@ var express      = require('express')
 
 //configure ejs
 app.set('view engine', 'ejs')
-app.use(ejsLayouts)
+app.use(ejsLayout)
 
 //root route
 app.get('/', function(req, res){
