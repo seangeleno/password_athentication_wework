@@ -13,12 +13,19 @@ var express      = require('express')
 
 //configure ejs
 app.set('view engine', 'ejs')
-app.use(ejsLayouts)
+app.use(ejsLayout)
 
 //root route
 app.get('/', function(req, res){
   res.render('index')
 })
+
+//mongoose connection
+mongoose.connect('mongodb://localhost/passport-authentication', function(err){
+  if(err) return console.log('This shit is shit, cannot connect')
+  console.log('Connected to MongoDB. Sweet!')
+})
+
 
 app.listen(port, function(){
   console.log('Server running on port ' +  port);
