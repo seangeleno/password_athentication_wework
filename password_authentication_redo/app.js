@@ -10,6 +10,7 @@ var express      = require('express')
 ,   session      = require('express-session')
 ,   passport     = require('passport')
 ,   port         = process.env.PORT || 3000
+,   userRoutes   = require('./routes/users.js')
 
 //configure ejs
 app.set('view engine', 'ejs')
@@ -31,6 +32,7 @@ app.use(logger('dev'))
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
+app.use ('/', userRoutes)
 
 app.listen(port, function(){
   console.log('Server running on port ' +  port);
