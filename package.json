@@ -1,0 +1,19 @@
+{
+  "name": "wework",
+  "version": "1.0.0",
+  "description": "Redoing today's password authentication session via Phillipe's awesome step-by-step markdown process'",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seangeleno/password_athentication_wework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seangeleno/password_athentication_wework/issues"
+  },
+  "homepage": "https://github.com/seangeleno/password_athentication_wework#readme"
+}
