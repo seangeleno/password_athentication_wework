@@ -10,3 +10,16 @@ var express      = require('express')
 ,   session      = require('express-session')
 ,   passport     = require('passport')
 ,   port         = process.env.PORT || 3000
+
+//configure ejs
+app.set('view engine', 'ejs')
+app.use(ejsLayouts)
+
+//root route
+app.get('/', function(req, res){
+  res.render('index')
+})
+
+app.listen(port, function(){
+  console.log('Server running on port ' +  port);
+})
